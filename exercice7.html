@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 7 </title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <h1>Calculatrice de cercle</h1>
+    
+    <div id="rayon"></div>
+    <div id="perimetre">.</div>
+    <div id="surface">.</div>
+
+    <script>
+    
+        const PI = Math.PI;
+        
+        let rayonSaisie = prompt("Entrez le rayon du cercle (en cm) :");
+        
+        if (rayonSaisie !== null) {
+            
+            let rayon = Number(rayonSaisie);
+            
+            if (!isNaN(rayon) && rayon > 0) {
+              
+                let perimetre = 2 * PI * rayon;
+                let surface = PI * rayon * rayon;
+                
+                document.getElementById("rayon").innerHTML = `Rayon : ${rayon} cm`;
+                document.getElementById("perimetre").innerHTML = `Périmètre : ${perimetre.toFixed(2)} cm`;
+                document.getElementById("surface").innerHTML = `Surface : ${surface.toFixed(2)} cm²`;
+                console.log(`Rayon saisi : ${rayon} cm`);
+                console.log(`Périmètre calculé : ${perimetre} cm`);
+                console.log(`Périmètre arrondi : ${perimetre.toFixed(2)} cm`);
+                console.log(`Surface calculée : ${surface} cm²`);
+                console.log(`Surface arrondie : ${surface.toFixed(2)} cm²`);
+            } 
+        } 
+    </script>
+</body>
+</html>
